@@ -6,6 +6,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 const pool = new pg.Pool({
+  // demo URL, will delete it later
   connectionString: "postgres://postgres:postgres@db.default.svc.cluster.local:5432/postgres",
 });
 

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image:  100xdevs/backend-pg:2
+          image: yashop7/backend-pg-k8s-lec4:1
           ports:
             - containerPort: 3000
 ---
