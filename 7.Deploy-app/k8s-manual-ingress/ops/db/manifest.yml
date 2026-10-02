@@ -16,7 +16,8 @@ spec:
         - name: db
           image: postgres:latest
           env:
-            - name: POSTGRES_PASSWORD
+          # User is bydefault in postgres is "postgres"
+            - name: POSTGRES_PASSWORD # Setting explicitly password has postgres
               value: postgres
           ports:
             - containerPort: 5432
@@ -30,6 +31,6 @@ spec:
     app: db
   ports:
     - protocol: TCP
-      port: 5432
-      targetPort: 5432
+      port: 5432 # Service PORT
+      targetPort: 5432 # POD PORT(where DB is working)
   type: ClusterIP
